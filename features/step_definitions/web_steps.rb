@@ -41,6 +41,16 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
   with_scope(parent) { When "#{step}:", table_or_string }
 end
 
+#When /^the edit page for "([^\"]*)"$/
+ # title = $1
+ # m_id = Movies.find_by_title(title).id
+ # '/#{m_id}/edit'
+      
+#When /^the details page for "([^\"]*)"$/
+  #title = $1
+  #m_id = Movies.find_by_title(title).id
+  #'/#{m_id}'
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
